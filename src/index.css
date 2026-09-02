@@ -25,6 +25,17 @@
     scroll-behavior: smooth;
   }
 
+  /* the header is sticky — anchor targets must clear it, not hide under it */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  @media (min-width: 640px) {
+    section[id] {
+      scroll-margin-top: 6.5rem;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -94,8 +105,24 @@
   animation: stamp-press 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
+@keyframes menu-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-drop {
+  animation: menu-drop 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-stamp-press {
+  .animate-stamp-press,
+  .animate-menu-drop {
     animation: none;
   }
 }

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-graphite: #1c1f1e;
+  --color-graphite-soft: #262a29;
+  --color-paper: #f6f3ec;
+  --color-orange: #ea6b48;
+  --color-orange-ink: #c63c17;
+  --color-kraft: #a9825a;
+
+  --font-display: "Big Shoulders", "Arial Narrow", sans-serif;
+  --font-body: "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-stamp: 0 18px 40px -20px rgb(0 0 0 / 0.55);
+  --shadow-card: 0 24px 48px -28px rgb(0 0 0 / 0.35);
+}
+
+@layer base {
+  * {
+    scrollbar-color: var(--color-orange) transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background: var(--color-graphite);
+    color: var(--color-paper);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-orange);
+    color: var(--color-graphite);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-graphite);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+    border-radius: 999px;
+    border: 3px solid var(--color-graphite);
+  }
+
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes stamp-press {
+  0% {
+    opacity: 0;
+    transform: scale(1.9) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.94) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-stamp-press {
+  animation: stamp-press 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-stamp-press {
+    animation: none;
+  }
+}

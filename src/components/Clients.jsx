@@ -39,7 +39,7 @@ export default function Clients() {
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-display text-4xl font-black uppercase leading-[0.95] tracking-tight text-graphite sm:text-5xl">
-            Principais clientes
+            Clientes e parceiros
           </h2>
           <p className="max-w-[36ch] font-mono text-xs uppercase tracking-[0.2em] text-graphite/70">
             Roteiro de carga aprovado — 12 empresas angolanas

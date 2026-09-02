@@ -4,7 +4,7 @@ import { IconPhone } from './icons'
 const LINKS = [
   { href: '#quem-somos', label: 'Quem somos' },
   { href: '#servicos', label: 'Serviços' },
-  { href: '#clientes', label: 'Clientes' },
+  { href: '#clientes', label: 'Clientes e parceiros' },
   { href: '#contacto', label: 'Contacto' },
 ]
 

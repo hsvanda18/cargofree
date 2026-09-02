@@ -137,7 +137,7 @@ A two-ground, one-accent palette: Graphite and Paper alternate as the page's two
 
 ### Hierarchy
 - **Display** (900, 2.75rem base → 3.6rem at `sm` → 4.1rem at `lg`, line-height 0.96, tracking -0.025em, uppercase): the hero H1 only.
-- **Headline** (900, 2.25rem → 3rem at `sm`, line-height 0.95, tracking -0.025em, uppercase): every section H2 ("Quem somos", "Nossos serviços", "Principais clientes", "Contactos") — one consistent scale reused across all four.
+- **Headline** (900, 2.25rem → 3rem at `sm`, line-height 0.95, tracking -0.025em, uppercase): every section H2 ("Quem somos", "Nossos serviços", "Clientes e parceiros", "Contactos") — one consistent scale reused across all four.
 - **Title** (700, 1.5rem → 1.875rem at `sm`, uppercase): service sub-headings and contact-signatory names.
 - **Body** (400, 1.125rem lead / 1rem for dense rows, line-height ~1.625, max 46–62ch measure): paragraph copy — hero intro, About lead, manifest-row descriptions, contact copy.
 - **Label** (500–600, 0.6875–0.75rem, tracking 0.16em–0.25em, uppercase): manifest-style data only — ORIGEM/DESTINO codes, field labels (MISSÃO/VISÃO/VALORES), nav-adjacent tags, figcaptions, role titles, stamp ring text.

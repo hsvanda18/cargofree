@@ -34,7 +34,7 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 
 - Two services only, asymmetric in depth: (1) Consultoria em importação/exportação — 6 concrete sub-services; (2) Agente de Transporte e logística nacional (terrestre, marítima, aérea) — one line, no sub-detail given. Do not invent parity between them.
 - No pricing, no online quote/booking flow, no client portal — contact is human (phone or email), not self-serve.
-- No case studies, metrics, or testimonials exist for this company yet; the client roster (12 logos) is the only proof asset. Do not fabricate stats, years-in-business, shipment counts, or quotes.
+- No case studies, metrics, or testimonials exist for this company yet; the client roster (16 logos) is the only proof asset. Do not fabricate stats, years-in-business, shipment counts, or quotes.
 
 ## Brand Commitments
 
@@ -46,13 +46,13 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 - Real assets on hand and already extracted at full quality with true alpha transparency from the source PDF (`CARGOFREE_APRESENTAÇÃO.cleaned.pdf`):
   - `assets/cargofree-lockup.png` — full logo lockup (mark + wordmark).
   - `assets/cargofree-icon.png` — mark only, cropped tight.
-  - `assets/clients/*.png` — all 12 real client logos, individually extracted, transparent where the source supported it (ATC ships on its native white chip).
+  - `assets/clients/*.png` — all 16 real client logos, individually extracted, transparent where the source supported it (ATC ships on its native white chip). The four newest were keyed out of flat-background JPEGs by `scripts/process_client_logos.py`.
   - Sector photography (containers at dusk, aircraft on tarmac, road/highway motion-blur) extracted from the same PDF at 2666×1499 — approved for reuse over generic stock or illustration per user decision.
 
 ## Evidence on Hand
 
 - Full institutional copy (quem somos, missão, visão, valores, serviços) — verbatim in the original brief, Portuguese (pt-PT/Angola usage), must be used as-is, no invented copy.
-- 12 real client names + logos (see Brand Commitments).
+- 16 real client names + logos (see Brand Commitments). The roster grew from 12 on 2026-09-10 with Admac Gráfica, Electro Panga, Smartec and Shamlan Tobacco. The count shown on the page is derived from the array, not typed, so it cannot drift again; the "empresas angolanas" wording was dropped to "empresas" because the four additions were not confirmed as Angolan-registered.
 - Company contacts, as supplied by the client on 2026-09-10: one phone line (+244 976 547 901), two mailboxes (comercial@grupocargofree.com, geral@grupocargofree.com), and the Luanda office address (Rua 28 de Maio n° 17, Edifício KENDE, Maianga). The directors' personal mobile numbers and personal mailboxes (António Lucas, Edilson Pires) were published in an earlier build and were withdrawn at the client's request — do not reinstate them. Whether the company line carries WhatsApp is unconfirmed, so no WhatsApp link ships.
 - No testimonials, no press, no numeric KPIs exist — must not be fabricated.
 

@@ -186,11 +186,13 @@ Borders are never thinner than 2px anywhere in the system — card edges, pill o
 
 ### Cards / Containers
 - **Corner Style:** 16px radius (`rounded-2xl`, {rounded.md}) on every card-like surface (client-logo cards, hero manifest-field panel).
-- **Background:** client-logo cards use pure white (`#FFFFFF`), deliberately distinct from the Paper ground behind them — the white card reads as a printed label sitting on the manifest sheet. Contact/hero panels use Graphite Soft on the Graphite ground.
+- **Background:** client-logo cards use pure white (`#FFFFFF`), deliberately distinct from the Paper ground behind them — the white card reads as a printed label sitting on the manifest sheet. The hero manifest panel uses Graphite Soft on the Graphite ground.
 - **Shadow Strategy:** client-logo cards carry their own soft ambient shadow (`0 10px 24px -16px rgb(28 31 30 / 0.35)`) that intensifies and warms toward Orange on hover (`0 14px 30px -16px rgb(234 107 72 / 0.45)`), paired with a border color shift to Orange/50 — the only true hover-lift component in the system. Other panels are flat, bordered only.
 - **Border:** 2px, low-opacity (`border-graphite/10` on white cards, `border-paper/15` on dark panels).
 - **Internal Padding:** ~20px (client cards), ~28px (manifest panels).
-- **The Hand-Stamped Roster Rule.** Client-logo cards each carry a small deterministic rotation (roughly ±0.6°–1.7°, varying per card from a fixed lookup table) so the grid reads as a hand-stamped roster of real, individually-cleared clients rather than a uniform logo wall.
+- **The Hand-Stamped Roster Rule.** Client-logo cards each carry a small deterministic rotation (roughly ±0.6°–1.7°, varying per card from a fixed lookup table of 16 values) so the grid reads as a hand-stamped roster of real, individually-cleared clients rather than a uniform logo wall.
+- **The Dark Card Exception.** White is the roster's card. A client whose mark exists only as a light lockup — white or pale type that vanishes on white — ships on a Graphite card with a `border-graphite/25` edge instead (`tone: 'dark'`, one client at time of writing: Shamlan Tobacco). Never solve this by pasting the logo's own coloured chip onto the white card: a chip inside a card is a card inside a card.
+- **The Optical Weight Rule.** A logo's cap is 64px (`max-h-16`), but a squarish lockup capped at 64px reads half the size of a wide one beside it, because the wide mark also fills the card's width. Marks under roughly 1.6:1 are flagged `compact` and get 80px of the card's 88px of inner height instead. Six of sixteen qualify. Check this whenever a logo joins the roster — the flag is per-logo, not derived at runtime.
 
 ### Manifest Rows (signature list pattern, used in place of generic cards)
 About's missão/visão/valores, Services' two offerings and Contact's phone/email/address are not card grids — they're `dl`/list rows separated by thick rules (4px top/bottom), each row pairing a short mono field label or numeral against full-measure body copy. This is the system's default way of presenting a short list of unequal-length items; reach for it before reaching for an icon-card grid.

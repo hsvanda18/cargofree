@@ -13,27 +13,27 @@ const VIAS = [
     icon: IconTruck,
     webp: terrestreWebp,
     jpg: terrestreJpg,
-    alt: 'Camião de mercadorias CargoFree em estrada de corredor',
-    width: 512,
-    height: 338,
+    alt: 'Dois camiões de mercadorias em marcha numa auto-estrada',
+    width: 1400,
+    height: 538,
   },
   {
     caption: 'Via marítima',
     icon: IconShip,
     webp: maritimaWebp,
     jpg: maritimaJpg,
-    alt: 'Contentores empilhados em pátio portuário',
-    width: 1200,
-    height: 751,
+    alt: 'Contentores marítimos empilhados em pátio de terminal',
+    width: 1300,
+    height: 860,
   },
   {
     caption: 'Via aérea',
     icon: IconPlane,
     webp: aereaWebp,
     jpg: aereaJpg,
-    alt: 'Aeronave de carga CargoFree em placa, com paletes a serem carregadas',
-    width: 1024,
-    height: 696,
+    alt: 'Aeronave de carga estacionada em placa ao pôr do sol, com carregador acoplado',
+    width: 1400,
+    height: 711,
   },
 ]
 
@@ -92,7 +92,7 @@ export default function Services() {
                     alt={via.alt}
                     caption={via.caption}
                     icon={via.icon}
-                    imgClass="h-44"
+                    imgClass="h-48 sm:h-56"
                     width={via.width}
                     height={via.height}
                     loading="lazy"

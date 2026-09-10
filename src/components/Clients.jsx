@@ -10,8 +10,8 @@ import ohuasi from '../assets/clients/ohuasi.png'
 import teia from '../assets/clients/teia.png'
 import turbotest from '../assets/clients/turbotest.png'
 import zahara from '../assets/clients/zahara.png'
-import remotaJpg from '../assets/photos/operacao-remota.jpg'
-import remotaWebp from '../assets/photos/operacao-remota.webp'
+import corredorJpg from '../assets/photos/corredor.jpg'
+import corredorWebp from '../assets/photos/corredor.webp'
 import Plate from './Plate'
 import { IconCheck, IconRoute } from './icons'
 
@@ -47,16 +47,16 @@ export default function Clients() {
         </div>
 
         <Plate
-          webp={remotaWebp}
-          jpg={remotaJpg}
-          alt="Aeronave de carga e maquinaria pesada numa pista junto a uma mina a céu aberto"
-          caption="Carga para operações remotas · sector mineiro e industrial"
+          webp={corredorWebp}
+          jpg={corredorJpg}
+          alt="Rasto de luzes de trânsito numa estrada em curva, ao anoitecer"
+          caption="Corredor rodoviário · trânsito ao anoitecer"
           icon={IconRoute}
           tone="light"
           frameClass="mt-12"
-          imgClass="h-56 sm:h-72"
-          width={1024}
-          height={650}
+          imgClass="h-52 sm:h-72"
+          width={1800}
+          height={360}
           loading="lazy"
         />
 

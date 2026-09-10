@@ -1,5 +1,5 @@
-import hubJpg from '../assets/photos/hub.jpg'
-import hubWebp from '../assets/photos/hub.webp'
+import patioJpg from '../assets/photos/patio-hero.jpg'
+import patioWebp from '../assets/photos/patio-hero.webp'
 import Plate from './Plate'
 import StampMark from './StampMark'
 import { IconRoute } from './icons'
@@ -58,16 +58,17 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[480px] lg:mx-0 lg:ml-auto">
+        <div className="relative mx-auto w-full max-w-[540px] lg:mx-0 lg:ml-auto">
           <div className="absolute -inset-3 -z-10 rounded-[28px] border-2 border-dashed border-kraft/40" aria-hidden="true" />
           <Plate
-            webp={hubWebp}
-            jpg={hubJpg}
-            alt="Centro de carga com cais de embarque, camiões e aeronave em pista"
+            webp={patioWebp}
+            jpg={patioJpg}
+            alt="Pátio de contentores empilhados junto a uma praça de camiões, ao início da manhã"
             caption="Consolidação e expedição de carga"
             frameClass="shadow-card"
-            width={1024}
-            height={820}
+            imgClass="h-[420px] sm:h-[520px]"
+            width={1400}
+            height={1164}
           />
           <div className="absolute -top-5 -right-3 flex -rotate-3 items-center gap-2 rounded-full border-2 border-orange bg-graphite px-4 py-2.5 shadow-stamp sm:-right-5">
             <span className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-orange" aria-hidden="true" />

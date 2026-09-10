@@ -1,3 +1,10 @@
+import terrenoJpg from '../assets/photos/operacao-terreno.jpg'
+import terrenoWebp from '../assets/photos/operacao-terreno.webp'
+import armazemJpg from '../assets/photos/armazem.jpg'
+import armazemWebp from '../assets/photos/armazem.webp'
+import Plate from './Plate'
+import { IconDocument, IconTruck } from './icons'
+
 const ROWS = [
   {
     field: 'Missão',
@@ -44,6 +51,35 @@ export default function About() {
               </div>
             ))}
           </dl>
+        </div>
+
+        {/* The valores row above claims a team that executes; these two frames
+            are that claim's evidence — the only people on the page. */}
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:mt-16 sm:grid-cols-2">
+          <Plate
+            webp={terrenoWebp}
+            jpg={terrenoJpg}
+            alt="Técnica de logística com colete reflector CARGO FREE e capacete, segurando uma prancheta"
+            caption="Conferência de carga · equipamento de protecção"
+            icon={IconDocument}
+            tone="light"
+            imgClass="h-72 object-top sm:h-[380px]"
+            width={1200}
+            height={699}
+            loading="lazy"
+          />
+          <Plate
+            webp={armazemWebp}
+            jpg={armazemJpg}
+            alt="Operadora de empilhadora ao volante, num armazém de mercadorias"
+            caption="Movimentação e consolidação em armazém"
+            icon={IconTruck}
+            tone="light"
+            imgClass="h-72 sm:h-[380px]"
+            width={1200}
+            height={900}
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

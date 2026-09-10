@@ -20,11 +20,11 @@ Both arrive with a practical, non-technical need: move goods across a border rel
 
 ## Product Purpose
 
-CARGO FREE is an Angolan freight forwarder / transport agent ("empresa transitária e agente de transporte") coordinating and optimizing import/export transport and logistics operations for diverse goods, by land, sea, and air. The page exists to convert institutional trust into a first contact (call/WhatsApp/email to one of the two named directors).
+CARGO FREE is an Angolan freight forwarder / transport agent ("empresa transitária e agente de transporte") coordinating and optimizing import/export transport and logistics operations for diverse goods, by land, sea, and air. The page exists to convert institutional trust into a first contact (a call or an email to the company's own commercial line).
 
 ## Positioning
 
-Not a tech-forward logistics SaaS. A young (jovem, disruptivo) but operationally experienced Angolan team executing real customs/freight operations with integrity, discipline, and direct/empathetic client relationships — the differentiator is direct human access to decision-makers (two named directors with direct phone numbers) plus end-to-end customs/consultancy expertise, not a booking platform or self-serve product.
+Not a tech-forward logistics SaaS. A young (jovem, disruptivo) but operationally experienced Angolan team executing real customs/freight operations with integrity, discipline, and direct/empathetic client relationships — the differentiator is direct human contact — one company line answered by people who decide, no ticket queue — plus end-to-end customs/consultancy expertise, not a booking platform or self-serve product.
 
 ## Operating Context
 
@@ -33,7 +33,7 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 ## Capabilities and Constraints
 
 - Two services only, asymmetric in depth: (1) Consultoria em importação/exportação — 6 concrete sub-services; (2) Agente de Transporte e logística nacional (terrestre, marítima, aérea) — one line, no sub-detail given. Do not invent parity between them.
-- No pricing, no online quote/booking flow, no client portal — contact is human (phone/WhatsApp/email), not self-serve.
+- No pricing, no online quote/booking flow, no client portal — contact is human (phone or email), not self-serve.
 - No case studies, metrics, or testimonials exist for this company yet; the client roster (12 logos) is the only proof asset. Do not fabricate stats, years-in-business, shipment counts, or quotes.
 
 ## Brand Commitments
@@ -53,7 +53,7 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 
 - Full institutional copy (quem somos, missão, visão, valores, serviços) — verbatim in the original brief, Portuguese (pt-PT/Angola usage), must be used as-is, no invented copy.
 - 12 real client names + logos (see Brand Commitments).
-- Two named contacts with direct phone/email: António Lucas (Director Geral), Edilson Pires (Director de Negociações); company email and Luanda office address (Rua 28 de Maio n° 17, Edifício KENDE, Maianga).
+- Company contacts, as supplied by the client on 2026-09-10: one phone line (+244 976 547 901), two mailboxes (comercial@grupocargofree.com, geral@grupocargofree.com), and the Luanda office address (Rua 28 de Maio n° 17, Edifício KENDE, Maianga). The directors' personal mobile numbers and personal mailboxes (António Lucas, Edilson Pires) were published in an earlier build and were withdrawn at the client's request — do not reinstate them. Whether the company line carries WhatsApp is unconfirmed, so no WhatsApp link ships.
 - No testimonials, no press, no numeric KPIs exist — must not be fabricated.
 
 ## Product Principles
@@ -61,7 +61,7 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 1. Institutional trust over startup flash — the page must read as a serious, operational Angolan company, not a logistics-tech demo.
 2. Content asymmetry is signal, not a layout bug — the two services, and the missão/visão/valores triad, should never be forced into false visual parity.
 3. Real assets only — every logo, client mark, and photo used must be one of the extracted real files; no stock placeholders, no invented metrics.
-4. Human contact is the conversion — the page's job is to get a stakeholder to call/WhatsApp/email António or Edilson, not to self-serve a quote.
+4. Human contact is the conversion — the page's job is to get a stakeholder to call the company line or email it, not to self-serve a quote.
 5. Avoid the terracotta/cream AI-generated-logistics-page cliché explicitly flagged by the user (see brief) — deliberate, sector-specific art direction, not a generic "warm SaaS" template.
 
 ## Accessibility & Inclusion

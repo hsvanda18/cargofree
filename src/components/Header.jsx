@@ -44,12 +44,12 @@ export default function Header() {
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <a
-            href="tel:+244941303935"
+            href="tel:+244976547901"
             className="flex shrink-0 items-center gap-2 rounded-full border-2 border-orange bg-orange/10 px-3 py-2 font-mono text-xs font-medium text-paper transition-colors hover:bg-orange hover:text-graphite sm:px-4 sm:text-sm"
-            aria-label="Ligar para +244 941 303 935"
+            aria-label="Ligar para +244 976 547 901"
           >
             <IconPhone className="h-4 w-4" stroke="currentColor" />
-            <span className="hidden sm:inline">+244 941 303 935</span>
+            <span className="hidden sm:inline">+244 976 547 901</span>
           </a>
 
           <button

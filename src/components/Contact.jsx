@@ -1,23 +1,12 @@
 import StampMark from './StampMark'
-import { IconMail, IconPhone, IconPin, IconWhatsapp } from './icons'
+import { IconMail, IconPhone, IconPin } from './icons'
 
-const SIGNATORIES = [
-  {
-    name: 'António Lucas',
-    role: 'Director Geral',
-    phone: '+244 941 303 935',
-    tel: '+244941303935',
-    wa: '244941303935',
-    email: 'antonio.lucas@grupocargofree.com',
-  },
-  {
-    name: 'Edilson Pires',
-    role: 'Director de Negociações',
-    phone: '+244 943 805 410',
-    tel: '+244943805410',
-    wa: '244943805410',
-    email: 'edilson.pires@grupocargofree.com',
-  },
+const PHONE_DISPLAY = '+244 976 547 901'
+const PHONE_TEL = '+244976547901'
+
+const EMAILS = [
+  { field: 'Comercial', address: 'comercial@grupocargofree.com' },
+  { field: 'Geral', address: 'geral@grupocargofree.com' },
 ]
 
 export default function Contact() {
@@ -32,49 +21,59 @@ export default function Contact() {
           Contactos
         </h2>
         <p className="mt-4 max-w-[52ch] font-body text-lg text-paper/70">
-          Sem formulário, sem espera — fale directamente com quem decide.
+          Sem formulário, sem espera — uma chamada ou um email directo.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 border-t-4 border-paper/20 pt-12 md:grid-cols-2">
-          {SIGNATORIES.map((s) => (
-            <div key={s.name} className="rounded-2xl border-2 border-paper/15 bg-graphite-soft/60 p-7">
-              <p className="font-display text-3xl font-bold text-paper">{s.name}</p>
-              <p className="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-orange">{s.role}</p>
+        <div className="mt-12 border-t-4 border-paper/20">
+          {/* the call is the page's conversion, so it gets display scale and the
+              whole row as its target */}
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="group flex flex-col gap-6 border-b-4 border-paper/20 py-8 sm:flex-row sm:items-end sm:justify-between sm:py-10"
+          >
+            <span className="block">
+              <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-orange">
+                Telefone
+              </span>
+              <span className="mt-3 block font-display text-[2.75rem] font-black leading-none tracking-tight text-paper transition-colors group-hover:text-orange sm:text-6xl">
+                {PHONE_DISPLAY}
+              </span>
+            </span>
+            <span className="flex w-fit shrink-0 items-center gap-2.5 rounded-full border-2 border-orange bg-orange/10 px-5 py-3 font-mono text-xs font-medium uppercase tracking-[0.2em] text-paper transition-colors group-hover:bg-orange group-hover:text-graphite">
+              <IconPhone className="h-4 w-4" stroke="currentColor" />
+              Ligar agora
+            </span>
+          </a>
 
-              <div className="mt-6 flex flex-col gap-3 font-body text-sm">
-                <a href={`tel:${s.tel}`} className="flex items-center gap-3 text-paper/85 transition-colors hover:text-orange">
-                  <IconPhone className="h-5 w-5 shrink-0" stroke="currentColor" />
-                  {s.phone}
-                </a>
+          <div className="grid grid-cols-1 border-b-4 border-paper/20 sm:grid-cols-2">
+            {EMAILS.map((e, i) => (
+              <div
+                key={e.address}
+                className={`py-7 sm:py-8 ${i === 0 ? 'border-b-2 border-paper/15 sm:border-b-0 sm:border-r-2 sm:pr-8' : 'sm:pl-8'}`}
+              >
+                <p className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-orange">
+                  {e.field}
+                </p>
                 <a
-                  href={`https://wa.me/${s.wa}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 text-paper/85 transition-colors hover:text-orange"
+                  href={`mailto:${e.address}`}
+                  className="mt-3 flex items-center gap-3 font-body text-base text-paper/85 transition-colors hover:text-orange sm:text-lg"
                 >
-                  <IconWhatsapp className="h-5 w-5 shrink-0" stroke="currentColor" />
-                  WhatsApp
-                </a>
-                <a href={`mailto:${s.email}`} className="flex items-center gap-3 break-all text-paper/85 transition-colors hover:text-orange">
-                  <IconMail className="h-5 w-5 shrink-0" stroke="currentColor" />
-                  {s.email}
+                  <IconMail className="h-5 w-5 shrink-0 text-orange" stroke="currentColor" />
+                  <span className="break-all">{e.address}</span>
                 </a>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t-4 border-paper/20 pt-8 text-paper/70 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-start gap-3">
-            <IconPin className="h-5 w-5 shrink-0 text-orange" stroke="currentColor" />
-            <p className="font-body text-sm">
+          <div className="py-7 sm:py-8">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-orange">
+              Morada
+            </p>
+            <p className="mt-3 flex items-start gap-3 font-body text-base text-paper/85 sm:text-lg">
+              <IconPin className="h-5 w-5 shrink-0 text-orange" stroke="currentColor" />
               Rua 28 de Maio n.° 17, Edifício KENDE — Maianga, Luanda
             </p>
           </div>
-          <a href="mailto:geral@grupocargofree.com" className="flex items-center gap-3 font-body text-sm transition-colors hover:text-orange">
-            <IconMail className="h-5 w-5 shrink-0 text-orange" stroke="currentColor" />
-            geral@grupocargofree.com
-          </a>
         </div>
       </div>
     </section>

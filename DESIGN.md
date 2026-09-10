@@ -117,7 +117,7 @@ A two-ground, one-accent palette: Graphite and Paper alternate as the page's two
 
 ### Neutral
 - **Graphite** (`#1C1F1E`): primary dark ground (Hero, Services, Contact sections; page `<body>` default) and default text-on-Paper via near-black contrast.
-- **Graphite Soft** (`#262A29`): elevated dark surface — the hero manifest-field panel, the Contact signatory cards and every annex plate frame sit on this, one step lighter than the section ground behind them.
+- **Graphite Soft** (`#262A29`): elevated dark surface — the hero manifest-field panel and every annex plate frame sit on this, one step lighter than the section ground behind them.
 - **Paper** (`#F6F3EC`): primary light ground (About, Clients, Footer sections) and default text color on Graphite grounds.
 
 ### Named Rules
@@ -138,7 +138,7 @@ A two-ground, one-accent palette: Graphite and Paper alternate as the page's two
 ### Hierarchy
 - **Display** (900, 2.75rem base → 3.6rem at `sm` → 4.1rem at `lg`, line-height 0.96, tracking -0.025em, uppercase): the hero H1 only.
 - **Headline** (900, 2.25rem → 3rem at `sm`, line-height 0.95, tracking -0.025em, uppercase): every section H2 ("Quem somos", "Nossos serviços", "Clientes e parceiros", "Contactos") — one consistent scale reused across all four.
-- **Title** (700, 1.5rem → 1.875rem at `sm`, uppercase): service sub-headings and contact-signatory names.
+- **Title** (700, 1.5rem → 1.875rem at `sm`, uppercase): service sub-headings.
 - **Body** (400, 1.125rem lead / 1rem for dense rows, line-height ~1.625, max 46–62ch measure): paragraph copy — hero intro, About lead, manifest-row descriptions, contact copy.
 - **Label** (500–600, 0.6875–0.75rem, tracking 0.16em–0.25em, uppercase): manifest-style data only — ORIGEM/DESTINO codes, field labels (MISSÃO/VISÃO/VALORES), nav-adjacent tags, figcaptions, role titles, stamp ring text.
 
@@ -164,7 +164,7 @@ Mostly flat with a small number of deliberate, structural lifts rather than ambi
 - **Card** (`--shadow-card: 0 24px 48px -28px rgb(0 0 0 / 0.35)`): under the hero annex plate — the one large elevated surface on the page. The other four plates carry no shadow; elevation marks the hero plate specifically, not the plate pattern.
 
 ### Named Rules
-**The Structural-Only Rule.** Shadows mark a specific physical claim (this is a stamped tag sitting on the photo; this is a lifted photo frame), not a generic card-hover pattern. Most surfaces — including the About/Services manifest rows and the Contact signatory cards — are flat or use only a border, never a shadow.
+**The Structural-Only Rule.** Shadows mark a specific physical claim (this is a stamped tag sitting on the photo; this is a lifted photo frame), not a generic card-hover pattern. Most surfaces — including the About, Services and Contact manifest rows — are flat or use only a border, never a shadow.
 
 ## Shapes
 
@@ -185,15 +185,17 @@ Borders are never thinner than 2px anywhere in the system — card edges, pill o
 - **Checkmark seal:** a small filled Orange circle with a Graphite border and the icon set's check mark (SVG, not a text glyph), pinned to the top-right corner of each client-logo card — a "cleared" mark, not a decorative accent.
 
 ### Cards / Containers
-- **Corner Style:** 16px radius (`rounded-2xl`, {rounded.md}) on every card-like surface (client-logo cards, hero manifest-field panel, Contact signatory panels).
+- **Corner Style:** 16px radius (`rounded-2xl`, {rounded.md}) on every card-like surface (client-logo cards, hero manifest-field panel).
 - **Background:** client-logo cards use pure white (`#FFFFFF`), deliberately distinct from the Paper ground behind them — the white card reads as a printed label sitting on the manifest sheet. Contact/hero panels use Graphite Soft on the Graphite ground.
 - **Shadow Strategy:** client-logo cards carry their own soft ambient shadow (`0 10px 24px -16px rgb(28 31 30 / 0.35)`) that intensifies and warms toward Orange on hover (`0 14px 30px -16px rgb(234 107 72 / 0.45)`), paired with a border color shift to Orange/50 — the only true hover-lift component in the system. Other panels are flat, bordered only.
 - **Border:** 2px, low-opacity (`border-graphite/10` on white cards, `border-paper/15` on dark panels).
-- **Internal Padding:** ~20px (client cards), ~28px (signatory/manifest panels).
+- **Internal Padding:** ~20px (client cards), ~28px (manifest panels).
 - **The Hand-Stamped Roster Rule.** Client-logo cards each carry a small deterministic rotation (roughly ±0.6°–1.7°, varying per card from a fixed lookup table) so the grid reads as a hand-stamped roster of real, individually-cleared clients rather than a uniform logo wall.
 
 ### Manifest Rows (signature list pattern, used in place of generic cards)
-About's missão/visão/valores and Services' two offerings are not card grids — they're `dl`/list rows separated by thick rules (4px top/bottom), each row pairing a short mono field label or numeral against full-measure body copy. This is the system's default way of presenting a short list of unequal-length items; reach for it before reaching for an icon-card grid.
+About's missão/visão/valores, Services' two offerings and Contact's phone/email/address are not card grids — they're `dl`/list rows separated by thick rules (4px top/bottom), each row pairing a short mono field label or numeral against full-measure body copy. This is the system's default way of presenting a short list of unequal-length items; reach for it before reaching for an icon-card grid.
+
+**The Conversion Row.** Contact's phone row is the one manifest row that breaks scale: the number is set in the display face at 2.75rem/6rem, the whole row is the `tel:` target, and a bordered call pill sits at its end. Everything else on that section stays at body scale — the page has exactly one number it wants dialled, and the type says so. It replaced a two-up of signatory cards carrying the directors' personal mobiles, withdrawn at the client's request (see PRODUCT.md); do not rebuild that pattern.
 
 ### Manifest Annex Plate (signature component)
 

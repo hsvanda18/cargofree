@@ -20,7 +20,7 @@ Both arrive with a practical, non-technical need: move goods across a border rel
 
 ## Product Purpose
 
-CARGO FREE is an Angolan freight forwarder / transport agent ("empresa transitária e agente de transporte") coordinating and optimizing import/export transport and logistics operations for diverse goods, by land, sea, and air. The page exists to convert institutional trust into a first contact (a call or an email to the company's own commercial line).
+CARGO FREE is an Angolan integrated logistics services company and transport agent ("empresa de serviços logísticos integrados e agente de transporte") coordinating and optimizing import/export transport and logistics operations for diverse goods, by land, sea, and air. The client retired the earlier "empresa transitária" (freight forwarder) positioning on 2026-09-14 — do not reintroduce it in copy or metadata. The page exists to convert institutional trust into a first contact (a call or an email to the company's own commercial line).
 
 ## Positioning
 

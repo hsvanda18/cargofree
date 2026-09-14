@@ -25,8 +25,8 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-[58ch] font-body text-lg leading-relaxed text-paper/75">
-            A CARGO FREE é uma empresa transitária e agente de transporte angolana,
-            especializada na coordenação e optimização das operações de transporte e
+            A CARGO FREE é uma empresa angolana de serviços logísticos integrados e
+            agente de transporte, especializada na coordenação e optimização das operações de transporte e
             logística na importação e exportação de mercadorias diversas.
           </p>
 

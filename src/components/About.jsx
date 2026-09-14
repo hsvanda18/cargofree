@@ -30,8 +30,8 @@ export default function About() {
               Quem somos
             </h2>
             <p className="mt-6 max-w-[46ch] font-body text-lg leading-relaxed text-graphite/75">
-              Transitária e agente de transporte angolana especializada na
-              coordenação e optimização das operações de transporte e
+              Empresa angolana de serviços logísticos integrados e agente de
+              transporte, especializada na coordenação e optimização das operações de transporte e
               logística na importação e exportação de mercadorias diversas.
             </p>
           </div>

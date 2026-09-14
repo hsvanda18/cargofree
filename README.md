@@ -1,7 +1,7 @@
 # CARGO FREE — Landing Page
 
-Site institucional de uma página da **CARGO FREE**, empresa transitária e agente
-de transporte angolana: coordenação e optimização de operações de transporte e
+Site institucional de uma página da **CARGO FREE**, empresa angolana de serviços
+logísticos integrados e agente de transporte: coordenação e optimização de operações de transporte e
 logística na importação e exportação de mercadorias, por via terrestre, marítima
 e aérea.
 

@@ -37,16 +37,7 @@ const VIAS = [
   },
 ]
 
-const CONSULTORIA_ITEMS = [
-  'Assessoria sobre custos de exportação, transporte, seguros e gestão de mercadorias',
-  'Intermediação na negociação com a alfândega',
-  'Trâmites dos Documentos de Transporte Internacional',
-  'Preparação da cotação',
-  'Planeamento da melhor rota — por tipo de mercadoria, segurança, custo e duração',
-  'Aconselhamento sobre o modo mais adequado de transporte',
-]
-
-export default function Services() {
+export default function Services({ content }) {
   return (
     <section id="servicos" className="bg-graphite py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
@@ -60,10 +51,10 @@ export default function Services() {
             <span className="font-display text-6xl font-black leading-none text-orange">01</span>
             <div>
               <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-paper sm:text-3xl">
-                Consultoria em importação e exportação de mercadorias
+                {content.consultoriaTitle}
               </h3>
               <ul className="mt-6 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2">
-                {CONSULTORIA_ITEMS.map((item) => (
+                {content.consultoriaItems.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-orange text-orange">
                       <IconCheck className="h-3.5 w-3.5" stroke="currentColor" strokeWidth={3} />
@@ -81,7 +72,7 @@ export default function Services() {
             <span className="font-display text-6xl font-black leading-none text-orange">02</span>
             <div>
               <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-paper sm:text-3xl">
-                Agente de transporte e logística nacional
+                {content.transporteTitle}
               </h3>
               <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
                 {VIAS.map((via) => (

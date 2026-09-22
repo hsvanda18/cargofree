@@ -5,22 +5,13 @@ import armazemWebp from '../assets/photos/armazem.webp'
 import Plate from './Plate'
 import { IconDocument, IconTruck } from './icons'
 
-const ROWS = [
-  {
-    field: 'Missão',
-    text: 'Oferecer a melhor solução de transporte e logística entre a estância aduaneira de saída (país de origem) e a estância aduaneira de entrada (país de destino), com os preços mais ajustados deste mercado, atendimento directo e com a plena empatia.',
-  },
-  {
-    field: 'Visão',
-    text: 'Dispor de uma rede de transporte e logística a nível nacional com a mais recente tecnologia.',
-  },
-  {
-    field: 'Valores',
-    text: 'Uma equipa completamente jovem e disruptiva, experiente, que executa as operações com integridade, empenho, disciplina, honestidade e empatia.',
-  },
-]
+export default function About({ content }) {
+  const rows = [
+    { field: 'Missão', text: content.missao },
+    { field: 'Visão', text: content.visao },
+    { field: 'Valores', text: content.valores },
+  ]
 
-export default function About() {
   return (
     <section id="quem-somos" className="bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
@@ -30,14 +21,12 @@ export default function About() {
               Quem somos
             </h2>
             <p className="mt-6 max-w-[46ch] font-body text-lg leading-relaxed text-graphite/75">
-              Empresa angolana de serviços logísticos integrados e agente de
-              transporte, especializada na coordenação e optimização das operações de transporte e
-              logística na importação e exportação de mercadorias diversas.
+              {content.intro}
             </p>
           </div>
 
           <dl className="border-t-4 border-graphite">
-            {ROWS.map((row) => (
+            {rows.map((row) => (
               <div
                 key={row.field}
                 className="grid grid-cols-1 gap-2 border-b-4 border-graphite py-7 sm:grid-cols-[10rem_1fr] sm:gap-8 sm:py-8"

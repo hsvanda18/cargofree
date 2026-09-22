@@ -1,6 +1,6 @@
 import icon from '../assets/cargofree-icon.png'
 
-export default function Footer() {
+export default function Footer({ tagline }) {
   const year = new Date().getFullYear()
   return (
     <footer className="border-t-4 border-orange bg-paper py-8">
@@ -11,9 +11,7 @@ export default function Footer() {
             © {year} CARGO FREE — Luanda, Angola
           </p>
         </div>
-        <p className="font-body text-sm text-graphite/70">
-          Confiança construída na satisfação dos nossos stakeholders.
-        </p>
+        <p className="font-body text-sm text-graphite/70">{tagline}</p>
       </div>
     </footer>
   )

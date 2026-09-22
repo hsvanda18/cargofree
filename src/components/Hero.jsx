@@ -4,7 +4,7 @@ import Plate from './Plate'
 import StampMark from './StampMark'
 import { IconRoute } from './icons'
 
-export default function Hero() {
+export default function Hero({ content }) {
   return (
     <section id="top" className="relative overflow-hidden bg-graphite pb-20 pt-14 sm:pb-28 sm:pt-20">
       <div className="pointer-events-none absolute inset-0 opacity-[0.06]" aria-hidden="true">
@@ -20,14 +20,12 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-14 px-6 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
         <div>
           <h1 className="font-display text-[2.75rem] font-black uppercase leading-[0.96] tracking-tight text-paper sm:text-[3.6rem] lg:text-[4.1rem]">
-            Confiança construída na satisfação dos nossos{' '}
-            <span className="text-orange">stakeholders</span>.
+            {content.headlineLine}{' '}
+            <span className="text-orange">{content.headlineHighlight}</span>.
           </h1>
 
           <p className="mt-6 max-w-[58ch] font-body text-lg leading-relaxed text-paper/75">
-            A CARGO FREE é uma empresa angolana de serviços logísticos integrados e
-            agente de transporte, especializada na coordenação e optimização das operações de transporte e
-            logística na importação e exportação de mercadorias diversas.
+            {content.intro}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 rounded-2xl border-2 border-paper/15 bg-graphite-soft/60 p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">

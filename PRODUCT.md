@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-React + Tailwind (Vite). User's explicit choice over plain HTML/CSS/JS.
+React + Tailwind (Vite), content-managed via Sanity (project `t2t3490q`, dataset `production`) as of 2026-09-22. See "Content Management (Sanity)" below.
 
 ## Users
 
@@ -46,7 +46,7 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 - Real assets on hand and already extracted at full quality with true alpha transparency from the source PDF (`CARGOFREE_APRESENTAÇÃO.cleaned.pdf`):
   - `assets/cargofree-lockup.png` — full logo lockup (mark + wordmark).
   - `assets/cargofree-icon.png` — mark only, cropped tight.
-  - `assets/clients/*.png` — all 16 real client logos, individually extracted, transparent where the source supported it (ATC ships on its native white chip). The four newest were keyed out of flat-background JPEGs by `scripts/process_client_logos.py`.
+  - `assets/clients/*.png` — all 16 real client logos, individually extracted, transparent where the source supported it (ATC ships on its native white chip). The four newest were keyed out of flat-background JPEGs by `scripts/process_client_logos.py`. As of the Sanity migration these files are no longer the page's source for the roster (Sanity's `client` documents are) — they stay in the repo as the seed script's source and as the offline fallback in `src/content/fallback.js`.
   - Sector photography (containers at dusk, aircraft on tarmac, road/highway motion-blur) extracted from the same PDF at 2666×1499 — approved for reuse over generic stock or illustration per user decision.
 
 ## Evidence on Hand
@@ -63,6 +63,67 @@ Core scenario: a shipment moves from an origin customs post ("estância aduaneir
 3. Real assets only — every logo, client mark, and photo used must be one of the extracted real files; no stock placeholders, no invented metrics.
 4. Human contact is the conversion — the page's job is to get a stakeholder to call the company line or email it, not to self-serve a quote.
 5. Avoid the terracotta/cream AI-generated-logistics-page cliché explicitly flagged by the user (see brief) — deliberate, sector-specific art direction, not a generic "warm SaaS" template.
+
+## Content Management (Sanity)
+
+As of 2026-09-22, the institutional copy, contacts, and client roster moved
+out of the React components and into a Sanity project (`t2t3490q`, dataset
+`production`), so the client can edit them without touching code or asking
+for a deploy.
+
+**What's in Sanity:** Hero (headline, intro), Quem somos (intro + missão/
+visão/valores), Serviços (consultancy title + 6-item list, transport-agent
+title), Contactos (phone, two emails, address), Definições do site (footer
+tagline), and the `client` collection (16 documents: name, logo image, tone,
+compact flag, order). Each of the first five is a true singleton — one fixed
+document id (`hero`, `about`, `services`, `contact`, `siteSettings`), pinned
+in `studio/structure.ts` so nobody can accidentally create a second one.
+
+**What stayed in code, deliberately:** the hero/services/about photography.
+It ships through a specific Python grading/cropping pipeline
+(`scripts/process_deck_photos.py`) tied to source files the client supplied
+as a one-off deck export, not something meant to be swapped casually from a
+CMS field — see DESIGN.md's "Asset provenance" note. Nav labels, section
+numerals, button microcopy ("Ligar agora", "Ver serviços"), and other
+structural UI strings also stayed in code — the brief that scoped this
+migration was explicitly "texto institucional, roteiro de clientes,
+contactos," not every string on the page.
+
+**Fetching:** client-side, once per page load, via `@sanity/client` with
+`useCdn: true` (`src/lib/sanity.js`, `src/lib/useSiteContent.js`) — there is
+no build/deploy pipeline in this repo to hook a rebuild-on-publish webhook
+into, so a runtime fetch is the only way a Studio edit reaches the live page
+without a manual redeploy. A published change is visible within the CDN's
+short cache window, not instantly — acceptable for a low-traffic institutional
+page; revisit if that ever needs to be instant.
+
+**Resilience doctrine:** `src/content/fallback.js` holds an exact snapshot of
+this content from cutover time and renders immediately; the Sanity fetch
+only overwrites it on success. This mirrors the project's existing motion
+rule (DESIGN.md: "the page must render its real content with no animation
+firing at all") — a CMS fetch is progressive enhancement, not a gate. Keep
+the fallback file roughly in sync when you notice real drift; it is a safety
+net for an API outage or CORS misconfiguration, not the source of truth.
+
+**Phone number:** Sanity's `contact` document stores one field, `phone`, in
+display format ("+244 976 547 901"). Both Header.jsx's call pill and
+Contact.jsx's `tel:` link derive the dial string from it in code
+(`phone.replace(/[^\d+]/g, '')`) instead of Sanity holding two separate
+fields — this exists specifically because an earlier build (2026-09-14) had
+the display and dial formats hand-typed in two places and they could have
+drifted; deriving one from the other makes that class of bug structurally
+impossible now.
+
+**Studio access & seeding:** `studio/` is a separate Sanity Studio app (own
+`package.json`, not an npm workspace) deployable to a free
+`*.sanity.studio` address. `scripts/seed-sanity.mjs` is the one-time cutover
+script that pushed the pre-Sanity copy and uploaded the 16 client logos as
+image assets; it's idempotent (fixed `_id`s, `createOrReplace`) and only
+useful again if the dataset needs rebuilding from scratch. It requires a
+Sanity API token with Editor rights, read from `SANITY_API_TOKEN` in the
+runner's own shell — never pass that token through a chat or store it in
+the repo. The Studio's read access for the live site further requires the
+site's origin(s) to be added under sanity.io/manage → API → CORS Origins.
 
 ## Accessibility & Inclusion
 

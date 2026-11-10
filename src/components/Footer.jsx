@@ -12,6 +12,17 @@ export default function Footer({ tagline }) {
           </p>
         </div>
         <p className="font-body text-sm text-graphite/70">{tagline}</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-graphite/70">
+          Created by{' '}
+          <a
+            href="https://www.instagram.com/hairtonvanda/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-graphite underline decoration-orange underline-offset-4 transition-colors hover:text-orange"
+          >
+            @hairtonvanda
+          </a>
+        </p>
       </div>
     </footer>
   )

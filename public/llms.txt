@@ -1,0 +1,45 @@
+# CARGO FREE
+
+> Empresa angolana de serviços logísticos integrados e agente de transporte, sediada em Luanda. Coordena e optimiza operações de transporte e logística na importação e exportação de mercadorias diversas, por via terrestre, marítima e aérea.
+
+O site é uma única página em português. Esta é a informação principal.
+
+## Páginas
+
+- [Início](https://grupocargofree.com/): apresentação da empresa
+- [Quem somos](https://grupocargofree.com/#quem-somos): missão, visão e valores
+- [Serviços](https://grupocargofree.com/#servicos): consultoria em importação e exportação e transporte nacional
+- [Clientes e parceiros](https://grupocargofree.com/#clientes): empresas que trabalham com a CARGO FREE
+- [Contacto](https://grupocargofree.com/#contacto): telefone, email e morada
+
+## Serviços
+
+### Consultoria em importação e exportação de mercadorias
+
+- Assessoria sobre custos de exportação, transporte, seguros e gestão de mercadorias
+- Intermediação na negociação com a alfândega
+- Trâmites dos documentos de transporte internacional
+- Preparação de cotações
+- Planeamento da melhor rota por tipo de mercadoria, segurança, custo e duração
+- Aconselhamento sobre o modo de transporte mais adequado
+
+### Agente de transporte e logística nacional
+
+Transporte e logística dentro de Angola.
+
+## Missão, visão e valores
+
+- Missão: oferecer a melhor solução de transporte e logística entre a estância aduaneira de saída (país de origem) e a estância aduaneira de entrada (país de destino), com preços ajustados ao mercado, atendimento directo e empatia.
+- Visão: dispor de uma rede de transporte e logística a nível nacional com a mais recente tecnologia.
+- Valores: uma equipa jovem, disruptiva e experiente, que trabalha com integridade, empenho, disciplina, honestidade e empatia.
+
+## Clientes
+
+Angelec, Facul Centro Académico Digital, Ang Trust Company, IP4U, Frotcom, Mineração Buco-Zau, Engevia, Turbotest Angola, TEIA, Engeminas, OHUASI Investment, Zahara Imobiliária, Admac Gráfica, Electro Panga, Smartec e Shamlan Tobacco.
+
+## Contacto
+
+- Telefone: +244 976 547 901
+- Comercial: comercial@grupocargofree.com
+- Geral: geral@grupocargofree.com
+- Morada: Rua 28 de Maio n.º 17, Edifício KENDE, Maianga, Luanda, Angola
